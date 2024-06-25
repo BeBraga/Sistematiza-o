@@ -83,6 +83,6 @@ class FuncionarioSuporte extends Funcionario {
 	public void exibirInformacoes() {
 		System.out.println("Funcionário Suporte: ");
 		super.exibirInformacoes();
-		System.out.println("funcao: " + funcao);
+		System.out.println("Função: " + funcao);
 	}
 }
