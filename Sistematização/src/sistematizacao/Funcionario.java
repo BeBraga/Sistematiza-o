@@ -34,8 +34,7 @@ public class Funcionario {
 		List<Funcionario> lista = new ArrayList<>();
 		lista.add(new FuncionarioAgente("Bernardo Braga Oliveira Viana", 20, "O+", "Nenhuma", "Nenhuma", 83100994));
 		lista.add(new FuncionarioGerente("Maria Aparecida de Oliveira", 52, "O-", "Nenhuma", "Pressão alta", 85776391, "Gestão de pessoas", 11112222));
-		lista.add(new FuncionarioAgente("Giovani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576));
-		lista.add(new FuncionarioAgente("Guivani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576));
+		lista.add(new FuncionarioSuporte("Giovani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576, "Assistente"));
 		
 		for (Funcionario funcionarios : lista) {
 			funcionarios.exibirInformacoes();
@@ -71,5 +70,19 @@ class FuncionarioGerente extends Funcionario {
 		super.exibirInformacoes();
 		System.out.println("Departamento: " + departamento);
 		System.out.println("ContatoDepartamento: " + contatoDepartamento);
+	}
+}
+
+class FuncionarioSuporte extends Funcionario {
+	private String funcao;
+	
+	public FuncionarioSuporte(String nome, int idade, String tipoSanguineo, String alergias, String problemasMedicos, int contatoEmergencia, String funcao) {
+		super(nome, idade, tipoSanguineo, alergias, problemasMedicos, contatoEmergencia);
+		this.funcao = funcao;
+	}
+	public void exibirInformacoes() {
+		System.out.println("Funcionário Suporte: ");
+		super.exibirInformacoes();
+		System.out.println("funcao: " + funcao);
 	}
 }
