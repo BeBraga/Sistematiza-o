@@ -35,6 +35,7 @@ public class Funcionario {
 		lista.add(new FuncionarioAgente("Bernardo Braga Oliveira Viana", 20, "O+", "Nenhuma", "Nenhuma", 83100994));
 		lista.add(new FuncionarioGerente("Maria Aparecida de Oliveira", 52, "O-", "Nenhuma", "Pressão alta", 85776391, "Gestão de pessoas", 11112222));
 		lista.add(new FuncionarioAgente("Giovani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576));
+		lista.add(new FuncionarioAgente("Guivani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576));
 		
 		for (Funcionario funcionarios : lista) {
 			funcionarios.exibirInformacoes();
