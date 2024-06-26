@@ -32,7 +32,8 @@ public class Funcionario {
 	
 	public static void main(String[] args) {
 		List<Funcionario> lista = new ArrayList<>();
-		lista.add(new FuncionarioAgente("Bernardo Braga Oliveira Viana", 20, "O+", "Nenhuma", "Nenhuma", 83100994));
+		lista.add(new Funcionario("Custódio Geovane Viana", 55, "AB+", "Gato", "Nenhum", 89047685));
+		lista.add(new FuncionarioAgente("Bernardo Braga Oliveira Viana", 20, "O+", "Nenhuma", "Nenhuma", 83100994, "Maria Aparecida de Oliveira"));
 		lista.add(new FuncionarioGerente("Maria Aparecida de Oliveira", 52, "O-", "Nenhuma", "Pressão alta", 85776391, "Gestão de pessoas", 11112222));
 		lista.add(new FuncionarioSuporte("Giovani Braga Oliveira Viana", 21, "B-", "Poeira", "Diabetes", 86082576, "Assistente"));
 		
@@ -44,14 +45,17 @@ public class Funcionario {
 }
 
 class FuncionarioAgente extends Funcionario {
+	private String gerente;
 	
-	public FuncionarioAgente(String nome, int idade, String tipoSanguineo, String alergias, String problemasMedicos, int contatoEmergencia) {
+	public FuncionarioAgente(String nome, int idade, String tipoSanguineo, String alergias, String problemasMedicos, int contatoEmergencia, String gerente) {
 		super(nome, idade, tipoSanguineo, alergias, problemasMedicos, contatoEmergencia);
+		this.gerente = gerente;
 	}
 	
 	public void exibirInformacoes() {
-		System.out.println("Funcionário Operador: ");
-		super.exibirInformacoes();		
+		System.out.println("Funcionário Agente: ");
+		super.exibirInformacoes();
+		System.out.println("Gerente: " + gerente);
 	}
 }
 
